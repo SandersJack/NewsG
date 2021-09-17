@@ -1,0 +1,156 @@
+
+\section{Building the project}
+
+The source code is hosted on a GitLab\footnote{https://gitlab.cern.ch/help/gitlab-basics/start-using-git.md} repository,
+\url{https://gitlab.cern.ch/garfield/garfieldpp}.
+
+The following instructions describe how to download 
+and build Garfield++ from source. 
+\begin{itemize}
+  \item
+  Make sure that ROOT is installed. For installation instructions 
+  see \url{https://root.cern.ch/building-root} or
+  \url{https://root.cern.ch/downloading-root}.
+  \item
+  Make sure that GSL\footnote{https://www.gnu.org/software/gsl/}
+  (GNU Scientific Library) is installed.
+  \item
+  Make sure that the CMake\footnote{https://cmake.org/} 
+  build generator tool is installed.
+  \item
+  Define an environment variable \texttt{GARFIELD\_HOME} 
+  pointing to the directory where the Garfield++ source code
+  should be located.
+  If you are using bash, type
+\begin{lstlisting}[language=bash]
+export GARFIELD_HOME=/home/mydir/garfield
+\end{lstlisting} 
+  (replace \texttt{/home/mydir/garfield} by the path of your choice).
+  
+  For (t)csh-type shells, type
+\begin{lstlisting}[language=csh]
+setenv GARFIELD_HOME /home/mydir/garfield
+\end{lstlisting}
+  Include the above lines also in the \texttt{.bashrc} 
+  (or \texttt{.cshrc}) file in your home directory. 
+  If unsure which shell you are using, 
+  type \texttt{echo \${SHELL}}.
+  \item
+  Download the code from the repository, either 
+  using SSH access\footnote{See \url{https://gitlab.cern.ch/help/gitlab-basics/create-your-ssh-keys.md}
+for instructions how to create and upload the SSH keys for gitlab.} 
+\begin{lstlisting}[language=bash]
+git clone ssh://git@gitlab.cern.ch:7999/garfield/garfieldpp.git $GARFIELD_HOME
+\end{lstlisting}
+  or HTTPS access
+\begin{lstlisting}[language=bash]
+git clone https://gitlab.cern.ch/garfield/garfieldpp.git $GARFIELD_HOME
+\end{lstlisting}
+  \item
+  Create a build directory and make it your working directory, \eg
+\begin{lstlisting}[language=bash]
+mkdir $GARFIELD_HOME/build
+cd $GARFIELD_HOME/build
+\end{lstlisting}
+  \item
+  Run CMake.
+\begin{lstlisting}[language=bash]
+cmake $GARFIELD_HOME
+\end{lstlisting}
+  \begin{itemize}
+  \item
+  If you want to switch on debugging and switch off optimisation:
+\begin{lstlisting}[language=bash]
+cmake -DCMAKE_BUILD_TYPE=Debug $GARFIELD_HOME
+\end{lstlisting}
+  \item
+  The default install directory (containing the headers and library) 
+  is \texttt{\$GARFIELD\_HOME/install}. If you prefer a different path, 
+    set it using the \texttt{CMAKE\_INSTALL\_PREFIX} variable, \eg
+\begin{lstlisting}[language=bash]
+cmake -DCMAKE_INSTALL_PREFIX=/home/mygarfinstalldir $GARFIELD_HOME
+\end{lstlisting} 
+    \end{itemize}
+    \item
+    Type
+\begin{lstlisting}[language=bash]
+make
+\end{lstlisting}
+    followed by
+\begin{lstlisting}[language=bash]
+make install
+\end{lstlisting}
+    %\item
+    %Delete the build folder.
+    \item
+    To run Heed you need to define an environment variable 
+    \texttt{HEED\_DATABASE}.
+\begin{lstlisting}[language=bash]
+export HEED_DATABASE=$GARFIELD_HOME/Heed/heed++/database/
+\end{lstlisting}
+    \item
+    You also need to prepend the path to the install directory to the 
+    \texttt{CMAKE\_PREFIX\_PATH} environment variable to help 
+    CMake find your Garfield++ installation when building an application.
+\begin{lstlisting}[language=bash]
+export CMAKE_PREFIX_PATH=$GARFIELD_HOME/install:${CMAKE_PREFIX_PATH}
+\end{lstlisting}
+    \item
+    Add these two \texttt{export} commands to your \texttt{.bashrc} as well.
+  \end{itemize}
+
+After the initial download, you can do 
+\begin{lstlisting}[language=bash]
+git pull
+\end{lstlisting}
+followed by re-running the CMake and \texttt{make} steps above
+to update your installation to the latest version of the code. 
+To start from a clean slate, you can just delete and recreate the 
+\texttt{build} directory. 
+
+\section{Building an application}
+The recommended way to build a Garfield++-based application is 
+using CMake. Let us consider as an example the program \texttt{gem.C} 
+(see Sec.~\ref{Sec:ExampleGem}) 
+which together with the corresponding \texttt{CMakeLists.txt} can be 
+found in the directory \texttt{Examples/Gem} of the source tree. 
+As a starting point, we assume that you have built Garfield++ using the 
+instructions above and set up the necessary environment variables. 
+
+\begin{itemize}
+  \item
+  To keep the source tree clean, and since you will probably want to modify 
+  the program according to your needs, it is a good idea to copy 
+  the folder to another location.
+\begin{lstlisting}[language=bash]
+cp -r $GARFIELD_HOME/Examples/Gem .
+\end{lstlisting} 
+  \item
+  Create a build directory.
+\begin{lstlisting}[language=bash]
+mkdir Gem/build; cd Gem/build
+\end{lstlisting} 
+  \item
+  Run CMake
+\begin{lstlisting}[language=bash]
+cmake ..
+\end{lstlisting} 
+  followed by
+\begin{lstlisting}[language=bash]
+make
+\end{lstlisting}
+  \item
+  In addition to the executable (\texttt{gem}), the \texttt{build} 
+  folder should now also contain the field map (\texttt{*.lis}) 
+  files which have been copied there during the CMake step.
+  \item
+  To run the application, type
+\begin{lstlisting}
+./gem
+\end{lstlisting}
+\end{itemize}
+%\subsection{GarfRoot}
+%
+%The Garfield++ classes can be used interactively within the ROOT shell.
+%
+

@@ -1,0 +1,500 @@
+ 
+
+! /ZOOM,1,SCRN,0.395483,-0.212195,0.838277,1.013415   
+/SHOW,X11C  
+/DEVICE,VECTOR,0
+/DEVICE,BBOX,1  
+/DEVICE,DITHER,1
+/UIS,DYNA,0   
+/UIS,ZPIC,0   
+/REPLOT 
+FINISH  
+/POST1  
+!*  
+!*  
+/GRAPHICS,FULL
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, INDEX, 100, 100, 100, 0
+/RGB, INDEX, 0, 0, 0, 15
+/CONT,1,100,0, ,2000
+/REPLOT 
+PLESOL, EF,SUM, 0   
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+/DEVICE, VECTOR, 0
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, INDEX, 100, 100, 100, 0
+/RGB, INDEX, 0, 0, 0, 15
+/VSCALE,1,0.06,1
+PLVECT,EF, , , ,VECT,ELEM,ON,0  
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+/DEVICE, VECTOR, 0
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, INDEX, 100, 100, 100, 0
+/RGB, INDEX, 0, 0, 0, 15
+/CONT,1,100,0, ,0.1
+/REPLOT
+PLESOL, EF,SUM, 0   
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+/DEVICE, VECTOR, 0 
+/ZOOM,1,SCRN,-0.043651,-0.047561,0.058814,-0.153659 
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, INDEX, 100, 100, 100, 0
+/RGB, INDEX, 0, 0, 0, 15
+/CONT,1,100,0, ,2000
+/REPLOT 
+PLESOL, EF,SUM, 0   
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+/DEVICE, VECTOR, 0
+/ZOOM,1,SCRN,0.314975,0.446341,0.406462,0.354878
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, INDEX, 100, 100, 100, 0
+/RGB, INDEX, 0, 0, 0, 15
+/CONT,1,100,0, ,2000
+/REPLOT 
+PLESOL, EF,SUM, 0   
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+/DEVICE, VECTOR, 0
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, INDEX, 100, 100, 100, 0
+/RGB, INDEX, 0, 0, 0, 15
+/VSCALE,1,0.06,1
+PLVECT,EF, , , ,VECT,ELEM,ON,0  
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+/DEVICE, VECTOR, 0
+/DIST,1,1.37174211248,1 
+ /REP,FAST   
+ /DIST,1,1.37174211248,1 
+ /REP,FAST   
+ /DIST,1,1.37174211248,1 
+ /REP,FAST   
+ /FOC,1,,-0.3,,1 
+ /REP,FAST   
+ /FOC,1,,-0.3,,1 
+ /REP,FAST   
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, INDEX, 100, 100, 100, 0
+/RGB, INDEX, 0, 0, 0, 15
+/CONT,1,100,0, ,2000
+/REPLOT 
+PLESOL, EF,SUM, 0   
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+/DEVICE, VECTOR, 0
+!path at r=2mm
+path,p2mm,3,30,90  
+ppath,1,0,0,2,0,1  
+ppath,2,0,2,0,0,1  
+ppath,3,0,0,-2,0,1 
+pdef,pot,volt,,avg   
+PDEF, ,EF,SUM,AVG   
+/out , p2mm_list , txt 
+PRPATH, EFSUM 
+/out 
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, INDEX, 100, 100, 100, 0
+/RGB, INDEX, 0, 0, 0, 15
+PLPATH, EFSUM
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+/DEVICE, VECTOR, 0
+!path at 5 mm
+path,p5mm,3,30,90  
+ppath,1,0,0,5,0,1  
+ppath,2,0,5,0,0,1  
+ppath,3,0,0,-5,0,1 
+pdef,pot,volt,,avg   
+PDEF, ,EF,SUM,AVG  
+/out , p5mm_list , txt 
+PRPATH, EFSUM 
+/out 
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, INDEX, 100, 100, 100, 0
+/RGB, INDEX, 0, 0, 0, 15
+PLPATH, EFSUM
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+/DEVICE, VECTOR, 0
+!path at 10 mm
+path,p10mm,3,30,90  
+ppath,1,0,0,10,0,1  
+ppath,2,0,10,0,0,1  
+ppath,3,0,0,-10,0,1 
+pdef,pot,volt,,avg   
+PDEF, ,EF,SUM,AVG  
+/out , p10mm_list , txt 
+PRPATH, EFSUM 
+/out 
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, INDEX, 100, 100, 100, 0
+/RGB, INDEX, 0, 0, 0, 15
+PLPATH, EFSUM
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+/DEVICE, VECTOR, 0
+!path at 50 mm
+path,p50mm,3,30,90  
+ppath,1,0,0,50,0,1  
+ppath,2,0,50,0,0,1  
+ppath,3,0,0,-50,0,1 
+pdef,pot,volt,,avg   
+PDEF, ,EF,SUM,AVG  
+/out , p50mm_list , txt 
+PRPATH, EFSUM 
+/out 
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, INDEX, 100, 100, 100, 0
+/RGB, INDEX, 0, 0, 0, 15
+PLPATH, EFSUM
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+/DEVICE, VECTOR, 0
+!path at 100 mm
+path,p100mm,3,30,90  
+ppath,1,0,0,100,0,1  
+ppath,2,0,100,0,0,1  
+ppath,3,0,0,-100,0,1 
+pdef,pot,volt,,avg   
+PDEF, ,EF,SUM,AVG  
+/out , p100mm_list , txt 
+PRPATH, EFSUM 
+/out 
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, INDEX, 100, 100, 100, 0
+/RGB, INDEX, 0, 0, 0, 15
+PLPATH, EFSUM
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+/DEVICE, VECTOR, 0
+!path at 145 mm
+path,p145mm,3,30,90  
+ppath,1,0,0,145,0,1  
+ppath,2,0,145,0,0,1  
+ppath,3,0,0,-145,0,1 
+pdef,pot,volt,,avg   
+PDEF, ,EF,SUM,AVG  
+/out , p145mm_list , txt 
+PRPATH, EFSUM 
+/out 
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, INDEX, 100, 100, 100, 0
+/RGB, INDEX, 0, 0, 0, 15
+PLPATH, EFSUM
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+/DEVICE, VECTOR, 0
+
+
+
+
+
+!!BEGIN VOLTAGE PLOTTING CODE!!
+ /AUTO,1 
+/REP,FAST  
+
+/EFACET,1   
+ PLNSOL, VOLT,, 0
+ /SHOW,WIN32C
+ /DEVICE,VECTOR,1
+ /DEVICE,BBOX,1  
+ /DEVICE,DITHER,1
+ !/DEVICE,ANIM,BMP
+ /UIS,DYNA,0   
+ /UIS,ZPIC,0   
+/REPLOT 
+
+!SAVE!
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, CNTR, 100, 100, 100, 1
+/RGB, CNTR, 0, 0, 0, 128
+/DEVICE,VECTOR,1
+/CONT,1,10000,0, ,50
+/REPLOT 
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+
+
+/ZOOM,1,RECT,-0.13102,0.820312 ,0.18780953033 ,0.0515624976584  
+/FOC,   1,   40.7164929996    ,   82.0916861689    ,   0.00000000000
+
+!SAVE!
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, CNTR, 100, 100, 100, 1
+/RGB, CNTR, 0, 0, 0, 128
+/DEVICE,VECTOR,1
+/CONT,1,10000,0, ,50
+/REPLOT 
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+
+
+
+
+!SAVE!
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, CNTR, 100, 100, 100, 1
+/RGB, CNTR, 0, 0, 0, 128
+/DEVICE,VECTOR,1
+/CONT,1,10000,0, ,100
+/REPLOT 
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+
+
+ /AUTO,1 
+/REP,FAST  
+ 
+ /ZOOM,1,RECT,-0.255207,-0.00218295 ,0.22079594822 ,-0.792411606426  
+/FOC,   1,   10.8290853009    ,  -92.7224643372    ,   0.00000000000
+ /REPLO  
+
+!SAVE!
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, CNTR, 100, 100, 100, 1
+/RGB, CNTR, 0, 0, 0, 128
+/DEVICE,VECTOR,1
+/CONT,1,10000,0, ,50
+/REPLOT 
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+
+
+
+
+!SAVE!
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, CNTR, 100, 100, 100, 1
+/RGB, CNTR, 0, 0, 0, 128
+/DEVICE,VECTOR,1
+/CONT,1,10000,0, ,100
+/REPLOT 
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+
+
+ /ZOOM,1,RECT,0.107254,0.875364 ,0.343071842429 ,-0.779313893923 
+ /FOC,   1,   2.58770478189    ,  -97.4114695193    ,   0.00000000000
+ /REPLO  
+ /FOC,   1,   2.68478243940    ,  -98.3822460944    ,   0.00000000000
+ /REPLO
+
+
+!SAVE!
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, CNTR, 100, 100, 100, 1
+/RGB, CNTR, 0, 0, 0, 128
+/DEVICE,VECTOR,1
+/CONT,1,10000,0, ,50
+/REPLOT 
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+
+
+!SAVE!
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, CNTR, 100, 100, 100, 1
+/RGB, CNTR, 0, 0, 0, 128
+/DEVICE,VECTOR,1
+/CONT,1,10000,0, ,75
+/REPLOT 
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+
+
+!SAVE!
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, CNTR, 100, 100, 100, 1
+/RGB, CNTR, 0, 0, 0, 128
+/DEVICE,VECTOR,1
+/CONT,1,10000,0, ,100
+/REPLOT 
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+
+
+
+ /AUTO,1 
+/REP,FAST  
+ /ZOOM,1,SCRN,-0.043651,-0.047561,0.058814,-0.153659 
+/ZOOM,1,SCRN,0.314975,0.446341,0.406462,0.354878
+ /DIST,1,1.37174211248,1 
+ /REP,FAST   
+ /DIST,1,1.37174211248,1 
+ /REP,FAST   
+ /DIST,1,1.37174211248,1 
+ /REP,FAST   
+ /FOC,1,,-0.3,,1 
+ /REP,FAST   
+ /FOC,1,,-0.3,,1 
+ /REP,FAST  
+
+
+!SAVE!
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, CNTR, 100, 100, 100, 1
+/RGB, CNTR, 0, 0, 0, 128
+/DEVICE,VECTOR,1
+/CONT,1,10000,0, ,2000
+/REPLOT 
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+
+!SAVE!
+!/sys, del file*.png
+/show, PNG
+pngr, tmod, 1
+pngr, comp, on, 9
+/gfile, 800 ! for the size of the graph in the output
+/CMAP, _TEMPCMAP_, CMP,,SAVE
+/RGB, CNTR, 100, 100, 100, 1
+/RGB, CNTR, 0, 0, 0, 128
+/DEVICE,VECTOR,1
+/CONT,1,30,0, ,2000
+/REPLOT 
+/CMAP, _TEMPCMAP_, CMP
+/DELETE, _TEMPCMAP_, CMP
+/SHOW, CLOSE
+!
+!
+PRNSOL,EF,COMP  
+NLIST,ALL, , , ,NODE,NODE,NODE  
+MPLIST,ALL,,,EVLT  
+elist,all,,,0,0
+PRNSOL, VOLT, COMP
