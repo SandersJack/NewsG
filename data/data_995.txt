@@ -1,0 +1,20 @@
+Volume, Process, Particle, Process, Radius, SecondaryParent, EnergyDeposit
+ \\\\\\\\\\  Run 0 start. ////////////////////
+================= EVENT 1 =================
+================= EVENT 2 =================
+================= EVENT 3 =================
+================= EVENT 4 =================
+================= EVENT 5 =================
+Primary Cathode,hadElastic,2112,15.5649,0,0
+Primary Cathode,hadElastic,2112,15.3101,0,0
+Primary Cathode,hadElastic,2112,15.6798,0,0
+Primary Cathode,hadElastic,2112,15.6892,0,0
+Secondary Cathode,ionIoni,1.00024e+09,15.6892,1,4.51109e-10
+Secondary Cathode,ionIoni,1.00026e+09,15.6798,1,8.14907e-10
+Secondary Cathode,ionIoni,1.00026e+09,15.3101,1,8.73115e-10
+Secondary Cathode,ionIoni,1.00026e+09,15.5649,1,1.30967e-10
+================= EVENT 6 =================
+================= EVENT 7 =================
+================= EVENT 8 =================
+================= EVENT 9 =================
+================= EVENT 10 =================

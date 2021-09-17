@@ -1,0 +1,53 @@
+Volume, Process, Particle, Process, Radius, SecondaryParent, EnergyDeposit
+ \\\\\\\\\\  Run 0 start. ////////////////////
+================= EVENT 1 =================
+================= EVENT 2 =================
+================= EVENT 3 =================
+================= EVENT 4 =================
+Primary Cathode,hadElastic,2112,15.4743,0,0
+Primary Cathode,hadElastic,2112,15.158,0,0
+Primary Cathode,hadElastic,2112,15.1606,0,0
+Primary Cathode,nCapture,2112,15.3328,0,0
+Secondary Cathode,ionIoni,1.00024e+09,15.3328,1,0.000896888
+Secondary Cathode,ionIoni,1.00023e+09,15.3328,5,5.88383e-06
+Secondary Cathode,phot,22,15.3328,12,2.565e-05
+Secondary Cathode,phot,22,15.3328,12,2.565e-05
+Secondary Cathode,phot,22,15.3328,22,2.548e-05
+Secondary Cathode,phot,22,15.3328,22,1.291e-05
+Secondary Cathode,phot,22,15.3328,22,1.274e-05
+Secondary Cathode,phot,22,15.3328,29,6.46e-06
+Secondary Cathode,phot,22,15.3329,21,2.565e-05
+Secondary Cathode,phot,22,15.3329,37,1.274e-05
+Secondary Cathode,phot,22,15.3329,40,1.274e-05
+Secondary Cathode,phot,22,15.3329,21,2.565e-05
+Secondary Cathode,phot,22,15.3329,44,2.548e-05
+Secondary Cathode,phot,22,15.333,47,1.291e-05
+Secondary Cathode,phot,22,15.3329,44,1.291e-05
+Secondary Cathode,phot,22,15.3329,51,1.274e-05
+Secondary Cathode,phot,22,15.3329,43,1.291e-05
+Secondary Cathode,phot,22,15.3329,43,1.274e-05
+Secondary Cathode,phot,22,15.333,21,2.044e-05
+Secondary Cathode,phot,22,15.333,58,2.565e-05
+Secondary Cathode,phot,22,15.333,58,1.274e-05
+Secondary Cathode,phot,22,15.3328,21,2.565e-05
+Secondary Cathode,phot,22,15.3328,65,2.565e-05
+Secondary Cathode,phot,22,15.3328,68,1.274e-05
+Secondary Cathode,phot,22,15.3328,12,1.274e-05
+Secondary Cathode,phot,22,15.3328,73,1.291e-05
+Secondary Cathode,phot,22,15.3326,12,4.424e-05
+Secondary Cathode,phot,22,15.3326,77,1.291e-05
+Secondary Cathode,phot,22,15.3328,11,2.548e-05
+Secondary Cathode,phot,22,15.3328,83,1.274e-05
+Secondary Cathode,ionIoni,1.00026e+09,15.1606,1,2.18279e-10
+Secondary Cathode,ionIoni,1.00028e+09,15.158,1,2.32831e-10
+Secondary Cathode,ionIoni,1.00024e+09,15.4743,1,5.09317e-10
+================= EVENT 5 =================
+Primary Cathode,hadElastic,2112,15.6955,0,0
+Secondary Cathode,ionIoni,1.00028e+09,15.6955,1,1.57161e-09
+================= EVENT 6 =================
+================= EVENT 7 =================
+================= EVENT 8 =================
+Primary Cathode,hadElastic,2112,15.9837,0,0
+Secondary Cathode,ionIoni,1.00026e+09,15.9837,1,9.16771e-10
+================= EVENT 9 =================
+================= EVENT 10 =================
