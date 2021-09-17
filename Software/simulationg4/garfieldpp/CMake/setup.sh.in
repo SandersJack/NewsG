@@ -1,5 +1,0 @@
-# Setup a minimal environment to build and run the examples
-
-export GARFIELD_HOME=@CMAKE_SOURCE_DIR@
-export CMAKE_PREFIX_PATH=@CMAKE_INSTALL_PREFIX@:${CMAKE_PREFIX_PATH}
-export HEED_DATABASE=$GARFIELD_HOME/Heed/heed++/database
