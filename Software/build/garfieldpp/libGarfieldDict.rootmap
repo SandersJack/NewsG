@@ -1,0 +1,73 @@
+{ decls }
+namespace Garfield {  }
+
+[ libGarfieldDict.so ]
+# List of selected classes
+class Garfield::AvalancheMC
+class Garfield::AvalancheMicroscopic
+class Garfield::Component
+class Garfield::ComponentAnalyticField
+class Garfield::ComponentAnsys121
+class Garfield::ComponentAnsys123
+class Garfield::ComponentCST
+class Garfield::ComponentConstant
+class Garfield::ComponentFieldMap
+class Garfield::ComponentUser
+class Garfield::Geometry
+class Garfield::GeometryRoot
+class Garfield::GeometrySimple
+class Garfield::Medium
+class Garfield::MediumGas
+class Garfield::MediumMagboltz
+class Garfield::MediumSilicon
+class Garfield::OpticalData
+class Garfield::Sensor
+class Garfield::Solid
+class Garfield::SolidBox
+class Garfield::SolidTube
+class Garfield::Track
+class Garfield::TrackBichsel
+class Garfield::TrackElectron
+class Garfield::TrackHeed
+class Garfield::TrackPAI
+class Garfield::ViewCell
+class Garfield::ViewDrift
+class Garfield::ViewField
+class Garfield::ViewGeometry
+class Garfield::ViewMedium
+class Garfield::ViewSignal
+header Garfield/AvalancheMC.hh
+header Garfield/AvalancheMicroscopic.hh
+header Garfield/Component.hh
+header Garfield/ComponentAnalyticField.hh
+header Garfield/ComponentAnsys121.hh
+header Garfield/ComponentAnsys123.hh
+header Garfield/ComponentCST.hh
+header Garfield/ComponentConstant.hh
+header Garfield/ComponentFieldMap.hh
+header Garfield/ComponentUser.hh
+header Garfield/Geometry.hh
+header Garfield/GeometryRoot.hh
+header Garfield/GeometrySimple.hh
+header Garfield/Medium.hh
+header Garfield/MediumGas.hh
+header Garfield/MediumMagboltz.hh
+header Garfield/MediumSilicon.hh
+header Garfield/OpticalData.hh
+header Garfield/Sensor.hh
+header Garfield/Solid.hh
+header Garfield/SolidBox.hh
+header Garfield/SolidTube.hh
+header Garfield/Track.hh
+header Garfield/TrackBichsel.hh
+header Garfield/TrackElectron.hh
+header Garfield/TrackHeed.hh
+header Garfield/TrackPAI.hh
+header Garfield/ViewCell.hh
+header Garfield/ViewDrift.hh
+header Garfield/ViewField.hh
+header Garfield/ViewGeometry.hh
+header Garfield/ViewMedium.hh
+header Garfield/ViewSignal.hh
+# List of selected namespaces
+namespace Garfield

@@ -1,0 +1,34 @@
+
+ LIST MATERIALS       1 TO       4 BY       1
+  PROPERTY= ALL 
+
+ MATERIAL NUMBER       1
+
+      TEMP        PERX
+                1.000000    
+
+ 
+
+ MATERIAL NUMBER       2
+
+      TEMP        PERX
+                1.000000    
+
+    
+
+ MATERIAL NUMBER       3
+
+      TEMP        PERX
+                3.200000    
+
+   
+
+ MATERIAL NUMBER       4
+
+      TEMP        PERX
+                1.000000    
+
+  
+
+
+

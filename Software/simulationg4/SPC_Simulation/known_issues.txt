@@ -1,0 +1,56 @@
+- Change signal to pulse conversion in EventAction
+
+- Set random seeds manually:
+  - Internal Geant4 (DONE)
+  - PrimaryGeneratorAction (TRandom3 For initial particle positions)
+  - UserG4FastSimulationModel (TRandom3 for various things)
+  - ElectronAvalanche (gRandom for Polya distribution)
+
+- Write a program to plot Magboltz gas properties for given E-field ranges and pressures
+
+- Move magboltz code over to simulationg4 instead of the separate repository
+
+- Investigate electrons leaving drift medium status message
+
+- Investigate local position vs global position for Garfield Hits
+  - Global position does work, but local should be the same co-ordinates as global (it used to be)
+
+- Update physics lists from Gamma camera
+
+- For AvalCustom, Initial ion and electron drift position is actually the position where the electron hits the anode, not the avalanche starting position
+
+- Fix visualisation (issue with Qt not finding a plugin)
+
+- Make a program that can do the Signal Calculation standalone instead of rerunning the whole simulation
+  - Already began this
+
+- Make a program that can do the Garfield avalanching standalone instead of rerunning the whole simulation
+  - Update the original Garfield simulation and use the ``Ionisation'' class to load in initial positions of the electrons when given to UserG4FSM
+
+- Add macro command to switch detector size between 15cm and 30cm throughout the simulation
+
+- Add macro command to change gas in geant4
+
+- Investigate differences in ANSYS .lis file versions to make them compatible with Garfield's ComponentAnsys121
+
+- Make commands to toggle ideal E-field and its parameters in the macro instead of hardcoded
+
+- Use formula to calculate Fano factor from W-value instead of it being set to 0.19 by default
+
+- Track energy of primary electrons given to Garfield?
+
+- Fix anode radius being hardcoded for AvalancheMicroscopic status messages in ElectronAvalanche.cc
+
+- Check if any of the electrons are still drifting backwards
+
+- Investigate average diffusion of the electrons starting in different positions
+
+- Check if cathode thickness is correct
+
+[- Adapt ideal vs ANSYS E-field plotting to be a separate code?]
+
+[- Tidy up code by removing legacy commented out gamma camera code?] 
+
+[- Set up a doxygen?]
+
+[- Continue profiling the simulation to see where we can save time?]

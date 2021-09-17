@@ -1,0 +1,25 @@
+
+universe = vanilla
+
+Executable     = .run_simulation_392452925906364663.sh
+input          = /disk/homedisk/home/user200/Software/run/simulation_rand_compl.mac
+
+#output       = /disk/moose/newsg/sanders/simulation_rand_compl/jackachinos_38_50/logs/out_$(Process).test
+log            = /disk/moose/newsg/sanders/simulation_rand_compl/jackachinos_38_50/logs/condor.log
+error          = /disk/moose/newsg/sanders/simulation_rand_compl/jackachinos_38_50/logs/error_$(Process).test
+
+request_memory = 5GB
+#stream_output=TRUE
+
+# Copy the executable when submitting so that we can (in theory) recompile
+# without breaking stuff
+transfer_input_files = /home/user200/Software/build/SPC_Simulation/SPC_Simulation
+transfer_output_files = output.root , rndmseeds , data.txt
+transfer_output_remaps = "output.root = /disk/moose/newsg/sanders/simulation_rand_compl/jackachinos_38_50/output/output_$(Process).root; rndmseeds = /disk/moose/newsg/sanders/simulation_rand_compl/jackachinos_38_50/rndmseeds_$(Process); data.txt = /disk/moose/newsg/sanders/simulation_rand_compl/jackachinos_38_50/data_$(Process).txt;"
+
+arguments = $(input)
+
+getenv = True
+
+queue 1000
+

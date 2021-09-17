@@ -1,0 +1,34 @@
+Sensor directories are of the following form:
+
+Name_detectorRadius_anodeDiameter_HV
+
+**This is slowly changing to be detectorDiamter (not radius). Current expection is ACHINOS_135cm_1.7mm_11anode and SNOGLOBE_135cm_3mm_1100V which has already been converted**
+
+Within these directories are the files needed by the simulation, and the files used to produce the code.
+
+In general, the ansys file is titled final.mac. There may also be a second .mac file present, which will generate some special case within that sensor (for instance, the tj13 series tests within the ACHINOS_135cm_1mm_11anode dir)
+
+Files needed for the simulation must be .lis.
+Needed files are :
+PRNSOL.lis
+MPLIST.lis
+ELIST.lis
+NLIST.lis
+
+Files may need to be manually changed: Particuarly NLIST.lis, which can has extra columns depending on printing mode used. Compare to working file to see which columns need to be removed. As of May 2020, new files will be processed so that this doesn't have to be done ("NLIST,ALL,,,,NODE,NODE,NODE" changed to "NLIST,ALL,,,COORD,NODE,NODE,NODE" ).
+MPLIST.lis will need changing; format of file has changed. Generally, this doesn't change between simulations so copy this from a previous, working sensor dir. 
+
+
+Simulation needs to be informed about the addition of any sensors in DetectorConstrcution.cc.
+
+If you're adding an ACHINOS, then you must also add it to the list of 3d field maps in FieldMap.cc
+
+Previously, you had to tell the simulation about sensors in all these places: EventAction.cc, FieldMap.cc, InitialisationParamters.cc and UserG4FastSimulation.cc, DetectorConstruction.cc. THis is left for reference. 
+
+IF there is an issue in one of the outputs files, is it of this form?:
+*  NLIST.lis may have extra columns with uneeded info that Garfield complains about. Known solution; See above to fix this error.
+*  Value of SEC cloumn of ELIST.lis is increaseing:
+   *  can be manually reset using "emodif, all, secnum, 1" (insert this line directly after final meshing step). **CAUTION!** When I've seen this it is usually (if not always) accompanied by the next error - the reason why these are linked is not clear to me. But fixing the next one fixes this one (when they occur together). 
+*  Get 'synchronisation lost' message from reading NLIST.lis:
+   *  Two known causes for this. The first, is the header of the NLIST.lis maybe have an extra line (compare to a working sensor to see)
+   *  NLIST.lis skips some nodes (first column should increase by 1 with each row, but this error can mean some are skipped). Issue at the initial meshing (not refinement, from experience so far) stage: The warning (!Not Error?!) message to look for is "midnodes moved, despite non-modifiable areas or lines.". It will be hidden among the accepted element shape warnings.... If this occurs,you probably adjusted slightly the geometry of things and now it's unhappy. 'Solution' used in achinos case was to change size of inner meshing sphere,as this caused the issue. Else, you may have to play with the 

@@ -1,0 +1,55 @@
+
+ LIST MATERIALS       1 TO       6 BY       1
+  PROPERTY= ALL 
+
+ MATERIAL NUMBER       1
+
+      TEMP        PERX
+                1.000000    
+
+      TEMP        PERY
+                1.000000    
+
+ MATERIAL NUMBER       2
+
+      TEMP        RSVX
+    -9999.0    -0.13999E+23
+     9999.0     0.13999E+23
+
+      TEMP        PERX
+                5.000000    
+
+      TEMP        PERY
+                5.000000    
+
+ MATERIAL NUMBER       3
+
+      TEMP        PERX
+                2.260000    
+
+      TEMP        PERY
+                2.260000    
+
+ MATERIAL NUMBER       4
+
+      TEMP        PERX
+                1.000000    
+
+      TEMP        PERY
+                1.000000    
+
+ MATERIAL NUMBER       5
+
+      TEMP        PERX
+                3.200000    
+
+      TEMP        PERY
+                3.200000    
+
+ MATERIAL NUMBER       6
+
+      TEMP        PERX
+                1.000000    
+
+      TEMP        PERY
+                1.000000    

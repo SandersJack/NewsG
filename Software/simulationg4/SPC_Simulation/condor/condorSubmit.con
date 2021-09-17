@@ -1,0 +1,27 @@
+######
+# A condor submit file that exercises lots of options
+######
+
+Universe       = vanilla
+initialdir     = ./output
+
+Executable     = runBatch.sh
+stream_error   = true
+#stream_output  = true
+stream_output  = false
+#output files are very large due to printing physics list
+
+#particle = electron
+#energy   = 10keV
+#position = anywhere
+#jobs     = 10
+
+macro    = $(particle)_$(energy)_$(position)
+
+arguments = $(Process) $(macro) $(jobs)
+
+#output         = logs/out_$(macro)_$(Process).test
+log            = logs/log_$(macro)_$(Process).test
+error          = logs/error_$(macro)_$(Process).test
+
+queue $INT(jobs)
