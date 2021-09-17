@@ -1,0 +1,68 @@
+# $Id: run2.mac 85993 2014-11-06 16:34:10Z ihrivnac $
+#
+# Macro file of "exampleB3.cc"
+# To be run preferably in batch, without graphics:
+# % exampleB3 run3.mac
+#
+#
+/control/verbose 0
+/run/verbose 1
+/tracking/verbose 1
+/event/verbose 0
+#/run/numberOfWorkers 4
+
+#/random/setSeeds 123 321
+
+########################
+### Particle Gun
+########################
+## Set initial particle type: Options are: e-, proton, photon, neutron, alpha, He4+
+/gun/initialParticle neutron
+/gun/initialEnergy 0.000025 keV
+# /gun/initialPositionCartesian 0 0 -1 cm
+####### for spherical coordinates it is: r, cosTheta, phi
+## if r is at origin (0), then randomized position uniformly in volume
+## similarly if direction mag 0., then randomized direction
+/gun/initialPositionSpherical 14.99 0 0 cm
+/gun/initialDirectionSpherical 0 0.999 0
+#### these are just used in the case of randomized positions.
+/gun/minRadius 1.5 mm
+/gun/maxRadius 14.99 cm
+
+########################
+### Setting-up detector
+########################
+# note it is of great importance to set it both at /det and /event
+/det/garfield/setSensor NITROGEN_15cm_3mm_3500V 
+/det/garfield/setGas gasFile_760_50_N2.gas
+/det/garfield/setPressure 750
+#/det/garfield/setIonMob BasicMobility
+
+/event/garfield/setnSignalBins 25000
+/event/garfield/setSignalBinSize 100 ns
+
+### Generation Type Options: Geant4, Electrons, HEED and SRIM
+/det/garfield/generationType Geant4
+/det/garfield/setSrimFile SR_OUTPUT_750_H_in_N2.srim
+/det/garfield/avalType Custom
+/det/garfield/avalMCStepType nColl
+/det/garfield/avalMCnColl 50000
+/det/garfield/debug 0
+/det/garfield/singleElec 1
+/det/garfield/singleIon 1
+/det/cathodeMaterial G4_STAINLESS-STEEL //G4_Galactic
+
+## Note: this turns off diffusion only in the avalanche region, in the drift region diffusion is still switched on
+/det/garfield/diffusion false
+
+/det/garfield/setWValue 31 eV
+/det/garfield/setFanoFactor 0.28
+#/det/garfield/setnSignalBins 100000
+#/det/garfield/setSignalBinSize 25 ns
+
+/det/update
+/run/initialize
+/grdm/verbose 1
+
+#
+/run/beamOn 100
