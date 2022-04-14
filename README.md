@@ -1,9 +1,9 @@
 # NewsG
-https://news-g.org/collaboration/
+https://news-g.org/collaboration/  
 The NEWS-G collaboration's goal is to use Spherical Proportional Counters (SPC) to directly detect Dark Matter
 
 # Project
-A large background for low-intensity searches is from neutrons produced from fission products found in the Earth's surface. These need to be understood/negated using the same SPCs.
+A large background for low-intensity searches is from neutrons produced from fission products found in the Earth's surface. These need to be understood/negated using the same SPCs.  
 The project was to detect neutrons using an SPC filled with Nitrogen high pressures 
 
 # Contents
